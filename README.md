@@ -25,6 +25,6 @@ under your control (to extent provided by express application). Purpose was not 
 rest-assured itself.
 3. https://graphql.org/code/#server-libraries this is a list of recomended servers
 I took a node JS one since it's fastest option.
-=======
-# rest-assured-graphql-simple-example
->>>>>>> 5128596f5ae6adb45b9c2fc2b6950b2b901bfb7e
+
+
+
