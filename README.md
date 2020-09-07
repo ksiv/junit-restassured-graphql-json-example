@@ -1,7 +1,7 @@
 
 # rest-assured-graphql-simple-example
 
-This is simple example of how to test GraphQL API ith rest-assured.
+This is a simple example of how to test GraphQL API ith rest-assured.
 Since it's simple the code is ugly. Components version is not the best ones
 so do not use it as production basement rather like a concept show-case.
 
