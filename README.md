@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## rest-assured-graphql-simple-example
 
 This is simple example of how to test GraphQL API ith rest-assured.
