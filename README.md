@@ -5,6 +5,9 @@ This is a simple example of how to test GraphQL API ith rest-assured.
 Since it's simple the code is ugly. Components version is not the best ones
 so do not use it as production basement rather like a concept show-case.
 
+## why does it work ? 
+At the time of creation of this sample a lot of servers (including node express-graphql) provide GraphQL servives in a form downcast to JSON format with all it's inherited limittation and bonuses. 
+
 ## requirement
 1. JDK
 2. Maven
