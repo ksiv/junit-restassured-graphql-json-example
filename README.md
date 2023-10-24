@@ -31,6 +31,8 @@ under your control (to extent provided by express application). Purpose was not 
 rest-assured itself.
 3. https://graphql.org/code/#server-libraries this is a list of recomended servers
 I took a node JS one since it's fastest option.
+4. During `npm install` you ll see a warning message "npm WARN deprecated express-graphql@0.12.0: This package is no longer maintained. We recommend using `graphql-http` instead. Please consult the migration document https://github.com/graphql/graphql-http#migrating-express-grpahql." it's quite allright as existing functionality suites the purpose
+
 
 
 
