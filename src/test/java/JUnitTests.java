@@ -1,15 +1,26 @@
-package RESTAssuredGraphQLTest;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
+import static java.lang.Thread.sleep;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
+
+
+
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class JUnitTests {
-    String endpointURL = "http://localhost:4000/graphql";
+    Server server = new Server(8080);
+    String endpointURL = "http://localhost:8080/graphql";
 
     @Test
     public void graphQLtoJSONusingJSONObject() {
@@ -56,5 +67,30 @@ public class JUnitTests {
         response.then().body("data.sumInt", equalTo(5));
         response.then().body("data.sumInt", lessThanOrEqualTo(5));
     }
+    @BeforeAll
 
+    public void startJetty() throws Exception {
+        // Create Server
+        System.out.println("Starting server");
+
+        // Create Context
+        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        context.setContextPath("/");
+
+        // Add Servlet
+        context.addServlet(new ServletHolder(new GraphQLServlet()), "/graphql");
+
+        // Set Handler
+        server.setHandler(context);
+
+        // Start Server
+        server.start();
+    }
+
+    @AfterAll
+    public void stopServer() throws Exception {
+        server.stop();
+        System.out.println("Stopping server");
+
+    }
 }

@@ -1,6 +1,3 @@
-package RESTAssuredGraphQLTest;
-
-
 public class graphQLrequestBuilder {
     protected org.json.JSONObject json;
     public graphQLrequestBuilder(){
