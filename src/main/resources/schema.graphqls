@@ -1,0 +1,8 @@
+type Query {
+  sumInt(firstInt: Int!, secondInt: Int!): Int
+
+}
+schema {
+  query: Query
+}
+
