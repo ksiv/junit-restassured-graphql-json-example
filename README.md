@@ -17,12 +17,11 @@ That is why one can use REST Assured framework to test it
 2. got to top project folder and run "mvn clean test"
 
 ## using docker
-pull latest maven image `docker pull maven`
-interactively run container based on this image and execute a command shell inside `docker run -it --name my-maven-container maven bash`
-changes the active directory to one of the current user
-`cd`
-Download this repo: git clone https://github.com/ksiv/junit-restassured-graphql-json-example.git
-go to junit-restassured-graphql-json-example folder `cd junit-restassured-graphql-json-example`
-run the tests  `mvn test`
+1. pull latest maven image `docker pull maven`
+2. interactively run container based on this image and execute a command shell inside `docker run -it --name my-maven-container maven bash`
+3. changes the active directory to one of the current user `cd`
+4. Download this repo: git clone https://github.com/ksiv/junit-restassured-graphql-json-example.git
+5. go to junit-restassured-graphql-json-example folder `cd junit-restassured-graphql-json-example`
+6. run the tests  `mvn test`
 
 
